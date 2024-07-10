@@ -1,4 +1,12 @@
 # VAL.STAT
-Basic Valorant Statistics App 
 
-All game mode statistics in one menu (Last 5 Matches for every game mode)
+A statistics app for Valorant, based on winUI3 (not finished.)
+
+
+## Features
+
+- Basic informations about your account
+- KDA measurements based on matches (in the future)
+- im not sure about what should i add lol, surely will add more features in the future
+
+  
