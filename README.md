@@ -2,6 +2,7 @@
 
 A statistics app for Valorant, based on winUI3 (not finished.)
 
+This program uses <a href="https://docs.henrikdev.xyz/">henrikdev.xyz API</a>
 
 ## Features
 

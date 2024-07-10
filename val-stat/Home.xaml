@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="val_stat.Home"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:val_stat"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:controls="using:CommunityToolkit.WinUI.Controls"
+    xmlns:res="using:Microsoft.UI.Xaml.Resources"
+    xmlns:sys="using:System"
+    xmlns:mux="using:Microsoft.UI.Xaml.Controls"
+    xmlns:ui="using:CommunityToolkit.WinUI" 
+    Background="Transparent">
+    <Grid x:Name="nam">
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        
+        <Border Grid.Column="0" Grid.RowSpan="2" Background="Black" Opacity="0.2"/>
+        <ScrollView Grid.Column="0" Grid.RowSpan="2">
+            <Grid Grid.Column="0" Grid.RowSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Viewbox Grid.Column="0" Margin="0,-20,0,0" Grid.Row="0" Height="150" Width="300" Stretch="Uniform" VerticalAlignment="Top" StretchDirection="Both">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Row="0">
+                            <PersonPicture x:Name="usr_pp" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,50,0,0" />
+                        </StackPanel>
+                    </Grid>
+                </Viewbox>
+                <StackPanel Grid.Row="1" HorizontalAlignment="Center" Margin="0,5,0,0">
+                    <Grid CornerRadius="8" Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="2*"/>
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="0" Grid.Column="0" Background="black" Opacity="0.4"/>
+                        <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">
+                            <TextBlock x:Name="usr_nametag" Text="no_data" Padding="30,10,30,10" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" Style="{StaticResource BodyTextBlockStyle}"/>
+                        </StackPanel>
+                        <Border x:Name="levelBackground" Grid.Row="1" Grid.Column="0" Background="Aqua" Opacity="0.3"/>
+                        <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="0,10,0,0">
+                            <TextBlock Text="Level" Style="{StaticResource SubtitleTextBlockStyle}" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                            <TextBlock x:Name="usr_level" Text="no_data" Padding="10,5,10,10" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" Style="{StaticResource BodyTextBlockStyle}"/>
+                        </StackPanel>
+                        <Border x:Name="rankBackground" Grid.Row="2" Grid.Column="0" Background="#4a5055" Opacity="0.4"/>
+                        <StackPanel Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="0,10,0,0">
+                            <TextBlock Text="Rank" Style="{StaticResource SubtitleTextBlockStyle}" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                            <Image x:Name="usr_rankImage" Margin="0,10,0,0" Width="85" Source="https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/0/smallicon.png"/>
+                            <TextBlock x:Name="usr_rank" Text="no data" Padding="10" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" Style="{StaticResource BodyTextBlockStyle}"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+
+                <StackPanel Grid.Row="2" VerticalAlignment="Bottom" Margin="0,5,0,0">
+                    <controls:SettingsExpander Description="Links to the raw json api for user" Margin="10,0,10,10"
+            Header="User API links">
+                        <controls:SettingsExpander.Items>
+                            <controls:SettingsCard HorizontalContentAlignment="Left" ContentAlignment="Left">
+                                <StackPanel Margin="-12,0,0,0" Orientation="Vertical">
+                                    <HyperlinkButton x:Name="link1" Content="Account API"/>
+                                    <HyperlinkButton x:Name="link2" Content="MMR API" />
+                                    <HyperlinkButton Content="Link 2" />
+                                    <HyperlinkButton Content="Link 3" />
+                                </StackPanel>
+                            </controls:SettingsCard>
+                        </controls:SettingsExpander.Items>
+                    </controls:SettingsExpander>
+                    <HyperlinkButton Content="Antaresrvish on Github" NavigateUri="http://www.github.com/antaresrvish" VerticalAlignment="Bottom" Margin="10,0,10,10"/>
+                    
+                </StackPanel>
+            </Grid>
+        </ScrollView>
+        <Grid Grid.Column="1">
+            <StackPanel x:Name="va">
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

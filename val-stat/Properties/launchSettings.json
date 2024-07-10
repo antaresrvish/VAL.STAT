@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "val-stat (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "val-stat (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
